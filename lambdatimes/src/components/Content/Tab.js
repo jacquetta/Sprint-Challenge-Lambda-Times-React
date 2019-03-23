@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tab = props => {
-    const selected = props.tab === props.selectedTab ? 'tab active-tab' : 'tab';
+    // const selectClass = {props.tab === props.selectedTab ? 'tab active-tab' : 'tab'};
   return (
     <div
-      className={selected}
+      className={props.tab === props.selectedTab ? "tab active-tab" : "tab"}
       onClick={() => {
-        props.selectHandler(props.tab)}}>
+        props.selectHandler(props.tab);
+      }}
+    >
       {props.tab.toUpperCase()}
     </div>
   );
-};
+}
 
 // Make sure you include PropTypes on your props.
 
