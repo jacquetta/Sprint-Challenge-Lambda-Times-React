@@ -40,7 +40,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className="content-container">
-        <Tabs tabs={this.state.tabs}  selectedTab={this.state.selected} selectHandler ={this.changeHandler} />
+        <Tabs tabs={this.state.tabs}  selectedTab={this.state.selected} selectHandler ={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
