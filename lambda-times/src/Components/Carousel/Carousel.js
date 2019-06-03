@@ -2,33 +2,30 @@ import React, { Component } from 'react';
 import { carouselData } from '../../data'
 // Complete this Carousel 
 export default class Carousel extends Component {
-  constructor(props){
-    super(props);
+  constructor(props, context){
+    super(props,context);
+
     this.state = {
+      index: 0,
+      direction: null,
+      images: carouselData
+    };
 
-    }
-  }
-  componentDidMount(){
-
-  }
-
-  leftClick = () => {
+    this.handleSelect = this.handleSelect.bind(this);
 
   }
-
-  rightClick = () => {
-
+  handleSelect(selectedIndex, e) {
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction
+    });
   }
 
-  selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
-  }
   
   render(){
     return (
       <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
+        
       </div>
     )
   }
