@@ -1,7 +1,7 @@
 import React from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import TopBar from './Components/TopBar';
+import Header from './Components/Header';
+import Content from './Components/Content/Content';
 import styled from 'styled-components';
 
 

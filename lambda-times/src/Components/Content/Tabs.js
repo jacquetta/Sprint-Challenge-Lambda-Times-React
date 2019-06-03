@@ -18,3 +18,5 @@ const Tabs = props => {
 Tabs.propTypes = {
     tabs: PropTypes.arrayOf(PropTypes.string)
 }
+
+export default Tabs;
